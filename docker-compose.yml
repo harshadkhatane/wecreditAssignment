@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./otp_auth_system
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=db
+      - DB_USER=postgres
+      - DB_PASSWORD=root
+      - DB_NAME=otp_auth
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./otp_auth_frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+
+  db:
+    image: postgres:17-alpine
+    container_name: otp_auth_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: otp_auth
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

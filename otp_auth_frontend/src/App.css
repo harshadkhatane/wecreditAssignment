@@ -1,0 +1,85 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Centered Card */
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Headings */
+.container h2 {
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 24px;
+}
+
+/* Inputs */
+.container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.container input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+}
+
+/* Buttons */
+.container button {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #4caf50;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background-color: #45a049;
+}
+
+.container button.secondary {
+  background-color: #007bff;
+}
+
+.container button.secondary:hover {
+  background-color: #0056b3;
+}
+
+/* Error Messages */
+.container p.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+/* Success Messages */
+.container p.success {
+  color: #2ecc71;
+  font-size: 14px;
+  margin-top: -5px;
+}
